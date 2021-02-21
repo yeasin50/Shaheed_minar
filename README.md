@@ -1,5 +1,9 @@
 # Shaheed Minar UI
 
+Mostly used rive for complex animation. 
+
+### ss of UI
+![OutPut Image](https://github.com/yeasin50/Shaheed_minar/blob/master/assets/images/ss.png)
 21st February is also known as the ‘Amor Ekushey’, the root of the Bengali Nationalism and an independent country, Bangladesh.
 
 The International Mother Language Day on 21st February is observed worldwide to promote the awareness of the cultural diversity, linguistic and multilingualism.
