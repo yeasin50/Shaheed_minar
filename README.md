@@ -1,12 +1,15 @@
-# shaheedMinar
+# Shaheed Minar UI
 
-A new Flutter project.
+21st February is also known as the ‘Amor Ekushey’, the root of the Bengali Nationalism and an independent country, Bangladesh.
+
+The International Mother Language Day on 21st February is observed worldwide to promote the awareness of the cultural diversity, linguistic and multilingualism.
+
+
+
+[More details ](https://www.traveldudes.com/21st-february-celebration-of-amor-ekushey/)
+
 
 ## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
 
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
