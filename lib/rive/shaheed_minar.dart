@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:developer';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:rive/rive.dart';
 import 'package:shaheedMinar/size.dart';
@@ -47,19 +48,34 @@ class _RiveMinarState extends State<RiveMinar>
         .then((data) async {
       final file = RiveFile();
       if (file.import(data)) {
-        setState(
-            () => _riveArtboard = file.mainArtboard..addController(animStart));
+        setState(() {
+          _riveArtboard = file.mainArtboard..addController(animStart);
+        });
       }
     });
-    log("Importing rive.....");
-    Timer(Duration(milliseconds: 2900), () {
-      //switch animation
-      log("timeout");
-      runningAnim();
+
+    // // log("Importing rive....."); //
+    // Timer(Duration(milliseconds: 2900), () {
+    //   //switch animation
+    //   log("timeout");
+    //   runningAnim();
+    // });
+
+    /// While finish the startUp animation, This will play the cycle animation (play)
+    Timer(Duration(milliseconds: 400), () {
+      animStart.isActiveChanged.addListener(() {
+        if (animPlay.isActive == false) {
+          log("StartUp anime ended ✌");
+          SchedulerBinding.instance.addPostFrameCallback((_) {
+            runningAnim();
+          });
+          ///`How can i delete this widget instance after anime completed`
+          /// should i call outside of this widget then how 
+        }
+      });
     });
   }
 
-  
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
